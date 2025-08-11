@@ -64,13 +64,13 @@ def main():
         driver.get(LOGIN_URL)
         time.sleep(2)
 
-        driver.find_element(By.CLASS_NAME,"method-password-btn").click()
+        driver.find_element(By.CSS_SELECTOR,"input .method-password-btn").click()
         time.sleep(2)
 
         print("Fyller i användarnamn och lösenord...")
         driver.find_element(By.NAME, "USER").send_keys(USERNAME)
         driver.find_element(By.NAME, "PASSWORD").send_keys(PASSWORD)
-        driver.find_element(By.ID, "submit").click()  # Om det finns en knapp med id "submit", annars ändra!
+        driver.find_element(By.CSS_SELECTOR,"input .button").click()  # Om det finns en knapp med id "submit", annars ändra!
 
         time.sleep(5)  # Vänta på att sidan laddas efter inloggning
 
@@ -95,7 +95,8 @@ def main():
             time.sleep(POLL_INTERVAL)
 
     finally:
-        driver.quit()
+       # driver.quit()
+       print(" hej")
 
 if __name__ == "__main__":
     main()
