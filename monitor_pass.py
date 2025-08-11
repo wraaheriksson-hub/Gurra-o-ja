@@ -64,6 +64,9 @@ def main():
         driver.get(LOGIN_URL)
         time.sleep(2)
 
+        driver.find_element(by.VALUE,"Med Lösenord").click()
+        time.sleep(2)
+
         print("Fyller i användarnamn och lösenord...")
         driver.find_element(By.NAME, "USER").send_keys(USERNAME)
         driver.find_element(By.NAME, "PASSWORD").send_keys(PASSWORD)
