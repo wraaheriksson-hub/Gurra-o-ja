@@ -70,7 +70,7 @@ def main():
         print("Fyller i användarnamn och lösenord...")
         driver.find_element(By.NAME, "USER").send_keys(USERNAME)
         driver.find_element(By.NAME, "PASSWORD").send_keys(PASSWORD)
-        driver.find_element(By.CSS_SELECTOR,"input .button").click()  # Om det finns en knapp med id "submit", annars ändra!
+        driver.find_element(By.CSS_SELECTOR,"div.form-field:nth-child(5) > input:nth-child(1)").click()  # Om det finns en knapp med id "submit", annars ändra!
 
         time.sleep(5)  # Vänta på att sidan laddas efter inloggning
 
