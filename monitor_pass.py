@@ -64,7 +64,7 @@ def main():
         driver.get(LOGIN_URL)
         time.sleep(2)
 
-        driver.find_element(By.CSS_SELECTOR,"input .method-password-btn").click()
+        driver.find_element(By.CSS_SELECTOR,"input.button:nth-child(8)").click()
         time.sleep(2)
 
         print("Fyller i användarnamn och lösenord...")
